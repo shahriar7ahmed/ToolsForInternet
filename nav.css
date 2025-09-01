@@ -1,0 +1,84 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; } /* universal reset */
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  min-height: 100vh;
+  display: grid;
+  place-items: start center;  /* center the navbar */
+  background: #121212;
+}
+
+/* Navbar */
+.navbar {
+  width: min(1100px, 92vw); /* responsive width */
+  margin-top: 32px; /* space above navbar */
+  background: #1f1f1f; /* navbar background color */
+  border-radius: 14px; /* navbar border radius */
+  padding: 14px 22px;
+  display: flex; /* flexbox for layout */
+  justify-content: space-between; /* space between logo and links */
+  align-items: center; /* vertically center items */
+  box-shadow: 0 10px 25px rgba(0,0,0,.35);
+}
+
+.logo {
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: .5px;
+}
+
+/* Links */
+.nav-links {
+  list-style: none; /* remove default list styles */
+  display: flex; 
+  gap: 14px;
+}
+
+.nav-links a {
+  /* Make transform visible and clickable area comfy */
+  display: inline-flex;                /* critical for transform to look right */
+  align-items: center;
+  justify-content: center; /* center the link content */
+
+  padding: 10px 16px; /* comfortable padding */
+  border-radius: 10px;
+  text-decoration: none; /* remove default link styling */
+  color: #eaeaea;
+  line-height: 1; /* single line height */
+  user-select: none;
+
+  /* Smoothness */
+  transition:
+    transform 180ms ease, /* make transform smooth */
+    background-color 180ms ease, /* make background color smooth */
+    box-shadow 180ms ease, /* make box shadow smooth */
+    color 180ms ease; 
+
+  will-change: transform; /* optimize for transform changes */
+}
+
+/* Hover: quick bounce + stay slightly larger */
+.nav-links a:hover {
+  background: #2a6df7;
+  color: #fff;
+  box-shadow: 0 8px 22px rgba(42,109,247,.35);
+
+  /* final resting scale while hovered */
+  transform: scale(1.08); /* final resting scale while hovered */
+
+  /* one-shot overshoot for “pop” feel */
+  animation: pop 200ms ease-out; /* one-shot overshoot for “pop” feel */
+}
+
+/* Optional: subtle press on active/click */
+.nav-links a:active {
+  transform: scale(0.98);
+}
+
+/* Pop keyframes: overshoot then settle at 1.08 */
+@keyframes pop {
+  0%   { transform: scale(1); } /* initial scale */
+  60%  { transform: scale(1.16); } /* overshoot scale */
+  100% { transform: scale(1.08); } /* final resting scale */
+}
