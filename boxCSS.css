@@ -1,0 +1,49 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  min-height: 100vh; /* Full height */
+  display: flex; /* Center items */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+}
+
+/* Container for all divs */
+body {
+  display: flex; /* Center items */
+  flex-wrap: wrap;      /* allows items to wrap in small screens */
+  gap: 20px;            /* space between boxes */
+  padding: 40px; /
+  justify-content: center;
+}
+
+/* Style for each div (card) */
+div {
+  flex: 1 1 200px;       /* responsive: grow/shrink, min 200px */
+  max-width: 250px;
+  height: 150px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex; /* Center items */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  font-size: 1.3rem; /* Font size */
+  font-weight: bold;
+  color: #333;
+  transition: transform 0.3s, background 0.3s;
+}
+
+/* Hover effect */
+div:hover {
+  background: #4facfe; 
+  color: white;
+  transform: translateY(-8px); /* Lift effect */
+}
