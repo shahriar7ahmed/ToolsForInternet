@@ -125,8 +125,8 @@ h1 {
 }
 
 /* Responsive */
-@media(max-width: 600px) {
-  .navbar { flex-direction: column; gap: 10px; }
+@media(max-width: 600px) { /* mobile styles */
+  .navbar { flex-direction: column; gap: 10px; } 
   .nav-links { flex-wrap: wrap; justify-content: center; }
   main { padding: 20px; }
   #todo-input, #add-btn, #todo-list { width: 100%; }
