@@ -143,6 +143,55 @@ nav li a:hover {
   height: auto;
 }
 
+/* Main container */
+main {
+  max-width: 1140px;
+  margin: 0 auto;
+  margin-top: 130px;
+  padding: 0 20px;
+}
+
+/* About Me section */
+.about {
+  padding: 80px 40px;
+  background-color: #fff8f3;
+  border-radius: 10px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.section-desc {
+  color: #757575;
+  text-align: center;
+  font-size: 18px;
+  margin: 0 auto 50px auto;
+  max-width: 900px;
+}
+
+.about-items {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  text-align: center;
+}
+
+.about-item h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.about-item p {
+  font-size: 16px;
+  color: #474747;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   nav ul {
@@ -152,10 +201,6 @@ nav li a:hover {
   .banner {
     flex-direction: column;
     text-align: center;
-  }
-
-  .banner-info {
-    max-width: 100%;
   }
 
   .banner-title {
@@ -168,5 +213,14 @@ nav li a:hover {
 
   .banner-buttons {
     justify-content: center;
+  }
+
+  .about {
+    padding: 50px 20px;
+  }
+
+  .about-items {
+    flex-direction: column;
+    gap: 30px;
   }
 }
