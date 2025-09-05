@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizza Burg Delivery | Order Form</title>
+    <link rel="stylesheet" href="devform.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Left: Food Images -->
+      <div class="image-section">
+        <h1>🍕 PIZZA BURG DELIVERY 🍔</h1>
+        <h2>Fresh & Delicious, Delivered Fast</h2>
+        <div class="food-gallery">
+          <img src="https://images.pexels.com/photos/2260555/pexels-photo-2260555.jpeg" alt="Pizza" style="height: 200px; object-fit: cover;" />
+          <img src="https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg" alt="Burger" style="height: 200px; object-fit: cover;" />
+          <img src="https://images.pexels.com/photos/851555/pexels-photo-851555.jpeg" alt="Coffee" style="height: 200px; object-fit: cover;" />
+          <img src="https://images.pexels.com/photos/1893555/pexels-photo-1893555.jpeg" alt="Fries" style="height: 200px; object-fit: cover;" />
+        </div>
+      </div>
+
+      <!-- Right: Order Form -->
+      <div class="form-section">
+        <h2>📝 Place Your Order</h2>
+        <form action="devformdata.html" method="get" class="order-form">
+          <!-- Customer Info -->
+          <fieldset>
+            <legend>👤 Customer Info</legend>
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="Enter your full name"
+            />
+
+            <label for="address">Address:</label>
+            <input
+              type="text"
+              id="address"
+              name="address"
+              required
+              placeholder="Delivery address"
+            />
+
+            <label for="phone">Phone Number:</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              placeholder="e.g. +8801XXXXXXXXX"
+            />
+          </fieldset>
+
+          <!-- Food Selection -->
+          <fieldset>
+            <legend>🍽️ Choose Your Meal</legend>
+            <label for="pizza">Select Pizza:</label>
+            <select id="pizza" name="pizza">
+              <option value="margherita">Margherita</option>
+              <option value="pepperoni">Pepperoni</option>
+              <option value="bbqchicken">BBQ Chicken</option>
+              <option value="veggie">Veggie</option>
+              <option value="fourcheese">Four Cheese</option>
+            </select>
+
+            <label for="burger">Select Burger:</label>
+            <select id="burger" name="burger">
+              <option value="none">None</option>
+              <option value="cheeseburger">Cheeseburger</option>
+              <option value="chickenburger">Chicken Burger</option>
+              <option value="beefburger">Beef Burger</option>
+              <option value="veggieburger">Veggie Burger</option>
+            </select>
+
+            <label for="drinks">Select Drinks:</label>
+            <select id="drinks" name="drinks">
+              <option value="none">None</option>
+              <option value="coke">Coca Cola</option>
+              <option value="sprite">Sprite</option>
+              <option value="fanta">Fanta</option>
+              <option value="coffee">Coffee</option>
+              <option value="water">Mineral Water</option>
+            </select>
+
+            <label for="sides">Select Side Dish:</label>
+            <select id="sides" name="sides">
+              <option value="none">None</option>
+              <option value="fries">French Fries</option>
+              <option value="wings">Chicken Wings</option>
+              <option value="garlicbread">Garlic Bread</option>
+            </select>
+          </fieldset>
+
+          <!-- Size and Quantity -->
+          <fieldset>
+            <legend>📏 Size & Quantity</legend>
+            <label for="size">Size:</label>
+            <select id="size" name="size" required>
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+            </select>
+
+            <label for="quantity">Quantity:</label>
+            <input
+              type="number"
+              id="quantity"
+              name="quantity"
+              min="1"
+              required
+            />
+          </fieldset>
+
+          <!-- Submit -->
+          <input type="submit" value="🚀 Place Order" class="submit-btn" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
